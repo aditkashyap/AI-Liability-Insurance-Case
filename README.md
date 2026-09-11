@@ -1,4 +1,3 @@
-# AI-Liability-Insurance-Case
 # Quantify 2026 Case Competition: Brand New Market — AI Liability Insurance
 
 **Team:** 2ronto  
@@ -10,61 +9,44 @@
 
 ## Executive Summary
 
-TileShield Insurance (TSI), a mid-sized Canadian P&C insurer headquartered in Toronto (~1% national market share, $834.2M 2025 earned premium), is evaluating entry into the nascent artificial intelligence liability market. TSI's tech-heavy SME client base is experiencing rapid operational disruption from AI tools while simultaneously adopting generative AI in client workflows—introducing novel operational, legal, and financial liabilities not contemplated by standard legacy commercial forms.
+TileShield Insurance (TSI), a mid-sized Canadian P&C insurer headquartered in Toronto (~1% national market share, $834.2M 2025 earned premium), is evaluating market entry into artificial intelligence liability. TSI's SME client base is experiencing rapid disruption from commercial AI tools while deploying generative AI across professional workflows, introducing operational and legal exposures not contemplated by legacy commercial forms.
 
-This repository contains the end-to-end actuarial diagnostics, insurability segmentation, product architecture, and 10-slide board presentation evaluating whether and how TSI should enter this market. 
+This repository contains the end-to-end actuarial models, insurability segmentation, product architecture, and 10-slide board presentation evaluating TSI's market entry.
 
-**Strategic Recommendation:** Execute **Option B (AI-Specific Policy Endorsements)** attached to TSI's existing Errors & Omissions (E&O), Cyber Liability, and Commercial General Liability (CGL) policies, while rejecting an un-sublimited Standalone product (Option A) and avoiding the client churn of delaying entry (Option C).
+**Strategic Recommendation:** Execute **Option B (AI-Specific Policy Endorsements)** attached to existing Errors & Omissions (E&O), Cyber Liability, and Commercial General Liability (CGL) policies. This strategy captures early-mover advantage while avoiding the un-sublimited catastrophic tail risks of a standalone product (Option A) and preventing the client churn associated with delaying entry (Option C).
 
 ---
 
 ## Key Actuarial & Data Insights
 
 ### 1. Portfolio Readiness & Volatility Analysis (Exhibit A)
-* **Capital Buffer in Core Lines:** TSI's balance sheet is supported by highly stable, profitable anchor lines:
-  * **Commercial General Liability (CGL):** $1.04B 5-year earned premium at a **77.13% 5-year combined ratio** ($\sigma_{\text{CR}} = 0.38\%$).
-  * **Errors & Omissions (E&O):** $437.66M 5-year earned premium at an **85.90% 5-year combined ratio** ($\sigma_{\text{CR}} = 3.02\%$), maintaining steady ~14% underwriting profit margins.
-* **Specialty Anchor Fit:** E&O exhibits ultra-low parameter variance in both claim frequency ($\bar{f} = 0.1191$, $\sigma_f = 0.0030$) and average severity ($\bar{s} = \$96.8\text{k}$, $\sigma_s = \$5.4\text{k}$), establishing it as the ideal actuarial vehicle to host new add-on endorsements.
-* **Cyber Line Warning (The Standalone Deterrent):** Cyber Liability experienced severe underwriting margin deterioration, reaching a **97.64% combined ratio in 2025** driven by an 82.2% surge in average claim severity ($\$164.4\text{k} \rightarrow \$299.6\text{k}$). This margin sensitivity cautions against launching an open-ended, un-sublimited standalone line (Option A).
+* **Capital Buffers in Core Lines:** TSI's balance sheet is supported by established, highly profitable anchor books:
+  * **Commercial General Liability (CGL):** Generated $1.04B in 5-year earned premium at a steady 77.13% combined ratio, exhibiting negligible year-over-year volatility (standard deviation of 0.38%).
+  * **Errors & Omissions (E&O):** Produced $437.66M in 5-year earned premium at an 85.90% combined ratio (standard deviation of 3.02%), consistently yielding ~14% underwriting profit margins.
+* **Specialty Anchor Fit:** E&O demonstrates tight parameter stability across both claim frequency (mean = 0.1191, standard deviation = 0.0030) and claim severity (mean = $96.8k, standard deviation = $5.4k). This predictability establishes E&O as the ideal actuarial vehicle to host initial endorsements.
+* **Cyber Line Warning:** Cyber Liability experienced significant underwriting deterioration, reaching a 97.64% combined ratio in 2025 due to an 82.2% surge in average claim severity ($164.4k in 2021 to $299.6k in 2025). This volatility confirms that TSI cannot prudently absorb an un-sublimited, standalone AI line.
 
 ### 2. AI Incident Anatomy & Insurability Diagnostics (Exhibit B)
-Analysis of the 135 external AI incident dataset ($446.1M total insured losses) indicates that AI liability is **partially insurable** through strict peril partitioning:
-* **Insurable Segment (High-Frequency / Bounded Severity):** 
-  * *Hallucinated Output* (36 claims, 26.7% share, mean severity $\$151.8\text{k}$, maximum $\$289.0\text{k}$).
-  * *Misinformation* (19 claims, 14.1% share, mean severity $\$585.3\text{k}$, maximum $\$1.19\text{M}$).
-  * *Algorithmic Bias* (26 claims, 19.3% share, mean severity $\$2.79\text{M}$).
-* **Uninsurable Tail Risk (Must Exclude):**
-  * *Autonomous System Failures* accounted for only 9 claims (6.7% count) but generated **$179.1M (40.1% of all losses)**, with a mean severity of **$19.90M per event** (maximum $\$31.17\text{M}$). A single physical autonomous failure would impair multi-year line earnings for a carrier of TSI's scale.
-* **Human-in-the-Loop (HITL) Severity Compression:**
-  * Incidents with documented human oversight averaged **$\$2.40\text{M}$** vs. **$\$4.23\text{M}$** for unmonitored systems—a statistically significant **43.3% severity reduction** ($\Delta = \$1.83\text{M}$ per claim).
+Evaluating the 135 external incidents ($446.1M total insured losses) indicates that AI liability is **partially insurable** through targeted peril segmentation:
+* **Insurable Segment (High Frequency / Bounded Severity):** 
+  * *Hallucinated Output:* 36 claims (26.7% share), mean severity of $151.8k, maximum observed loss of $289.0k.
+  * *Misinformation:* 19 claims (14.1% share), mean severity of $585.3k, maximum observed loss of $1.19M.
+  * *Algorithmic Bias:* 26 claims (19.3% share), mean severity of $2.79M.
+* **Uninsurable Tail Risk:**
+  * *Autonomous System Failures:* Accounted for only 9 claims (6.7% of count) but drove $179.1M (40.1% of all losses) with an average cost of $19.90M per event (maximum $31.17M). A single physical autonomous failure would impair multi-year underwriting earnings, requiring an absolute policy exclusion.
+* **Human-in-the-Loop (HITL) Impact:**
+  * Incidents with verified human oversight averaged $2.40M versus $4.23M for unmonitored systems—representing an immediate 43.3% severity reduction ($1.83M savings per claim).
 
 ---
 
-## Option B: Product Design & Governance Architecture
+## Option B: Product Design & Risk Controls
 
-* **E&O Endorsement Rider:** Covers legal defense costs and financial liabilities arising from generative AI hallucinations, professional service advisory errors, and algorithmic bias in software delivery.
-  * **Sub-limit:** Capped at **$\$250,000\text{--}\$500,000$** per policy year (defense costs eroding inside the limit).
-* **Cyber Endorsement Rider:** Covers direct financial losses from AI-synthesized deepfake executive impersonation, prompt injection exploits, and unauthorized funds transfer fraud.
-  * **Sub-limit:** **$\$500,000$** aggregate annual cap.
+* **E&O Endorsement Rider:** Covers legal defense costs and financial liabilities arising from generative AI hallucinations, professional service advisory errors, and algorithmic bias.
+  * *Sub-limit:* Capped at $250,000 to $500,000 per policy year, with defense costs eroding within the limit.
+* **Cyber Endorsement Rider:** Protects against direct losses from deepfake executive impersonation, prompt injection exploits, and unauthorized funds-transfer fraud.
+  * *Sub-limit:* Capped at $500,000 aggregate per policy year.
 * **Contractual Verifiability & Loss Sharing:**
-  * Replaces subjective oversight definitions with immutable system/API logs (e.g., GitHub PR approvals, CMS publish sign-offs).
-  * Enforces a tiered coinsurance/retention schedule: verified HITL workflows qualify for a standard $\$5,000$ deductible (90/10 coverage), while automated/batch pipelines carry a $\$25,000$ deductible and 50% coinsurance.
-* **Explicit Policy Carve-Outs:** Absolute exclusions for physical autonomous machinery/vehicles, intentional civil rights violations, and upstream foundation model hyperscaler cloud outages.
-* **Capital Ring-Fencing:** 50% quota-share reinsurance treaty structure paired with standardized affirmative exclusions attached to base policies declining the rider (eliminating "Silent AI" ambiguity).
-
----
-
-## Repository Structure
-
-```plaintext
-├── data/
-│   ├── Exhibits 2026 Quantify Case Study.xlsx  # Raw financial, incident, and market data
-│   └── 2026 Quantify Case Study.pdf           # Full case mandate and instructions
-├── presentations/
-│   ├── 2ronto Quantify Case Comp.pptx         # Finalized 10-slide competition deck
-│   └── Team2ronto_Submission.pdf              # Round 1 PDF deliverable
-├── scripts/
-│   ├── financial_diagnostics.py               # 5-year Loss, Expense, and Combined Ratio models
-│   ├── actuarial_stability.py                 # Variance, standard deviation, and parameter stability models
-│   └── incident_segmentation.py               # Exhibit B frequency-severity & HITL cross-tabulations
-└── README.md
+  * Replaces subjective oversight definitions with verifiable audit requirements (immutable system logs, signed code reviews, or CMS publication timestamps).
+  * Incorporates a tiered coinsurance schedule: verified human-in-the-loop workflows qualify for standard $5,000 deductibles and 90/10 coverage, while automated batch pipelines require a $25,000 deductible and 50% coinsurance.
+* **Policy Exclusions:** Absolute exclusions for physical autonomous machinery/vehicles, intentional civil rights violations, and upstream hyperscaler cloud outages.
+* **Capital Protection:** 50% quota-share reinsurance treaty structure paired with standardized affirmative exclusions attached to base policies that decline the endorsement.
